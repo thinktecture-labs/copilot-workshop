@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@evilmartians/lefthook": "^2.1.6",
-    "eslint": "^10.3.0",
+    "eslint": "^10.4.0",
     "eslint-plugin-vue": "^10.9.1",
     "playwright-chromium": "^1.60.0",
     "prettier": "^3.8.3",
