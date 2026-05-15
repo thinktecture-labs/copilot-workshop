@@ -1,0 +1,38 @@
+{
+  "name": "slidev-tt-template",
+  "type": "module",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinktecture-labs/slidev-tt-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thinktecture-labs/slidev-tt-template/issues"
+  },
+  "homepage": "https://github.com/thinktecture-labs/slidev-tt-template#readme",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export:pdf": "slidev export",
+    "export:pdf:dark": "slidev export --dark",
+    "export:pptx": "slidev export --format pptx",
+    "export:pptx:dark": "slidev export --format pptx --dark",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.15.1",
+    "@slidev/theme-default": "latest",
+    "vue": "^3.5.34"
+  },
+  "devDependencies": {
+    "@evilmartians/lefthook": "^2.1.6",
+    "eslint": "^10.3.0",
+    "eslint-plugin-vue": "^10.9.1",
+    "playwright-chromium": "^1.60.0",
+    "prettier": "^3.8.3",
+    "prettier-plugin-slidev": "^1.0.5",
+    "typescript-eslint": "^8.59.3"
+  }
+}

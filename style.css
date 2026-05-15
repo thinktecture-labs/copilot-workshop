@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Campton';
+  src: url('/fonts/Campton-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Campton';
+  src: url('/fonts/Campton-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Campton';
+  src: url('/fonts/Campton-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Campton';
+  src: url('/fonts/Campton-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --tt-red: #ff584f;
+  --tt-cream: #f4f5f8;
+  --tt-black: #22242d;
+  --tt-gray: #868686;
+  --tt-blue: #3d6fb4;
+  --tt-light-gray: #d1d1d1;
+  --tt-white: #ffffff;
+  --header-height: 47px;
+
+  --tt-bg: var(--tt-cream);
+  --tt-text: var(--tt-black);
+  --tt-text-muted: var(--tt-gray);
+  --tt-code-bg: #eeedeb;
+}
+
+html.dark {
+  --tt-bg: #1a1a1a;
+  --tt-text: #ececec;
+  --tt-text-muted: #d0d0d0;
+  --tt-code-bg: #2a2a2a;
+  --tt-black: #ececec;
+}
+
+html.dark .slidev-layout pre {
+  background-color: var(--tt-code-bg) !important;
+}
+
+html.dark .slidev-layout :deep(.shiki) {
+  background-color: var(--tt-code-bg) !important;
+}
+
+html.dark .tt-icon-png[src*='/icons/black/'] {
+  filter: invert(1);
+}
+
+.slidev-layout {
+  font-family: 'Campton', sans-serif;
+  font-weight: 400;
+  color: var(--tt-text);
+  background-color: var(--tt-bg);
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4 {
+  font-family: 'Campton', sans-serif;
+  font-weight: 600;
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  font-family: 'Campton', sans-serif;
+  font-weight: 400;
+}
+
+.slidev-layout code {
+  font-size: 0.9em;
+}
