@@ -108,6 +108,31 @@ One slash command → a complete feature slice.
 layout: default
 ---
 
+# Let Copilot Scaffold It · `/create-prompt`
+
+Don't hand-craft `.prompt.md` files — let Copilot generate them.
+
+```text
+/create-prompt        → guided generation of a .prompt.md file
+/prompts              → menu: pick existing or create new
+```
+
+Typical flow:
+
+1. Type `/create-prompt` in Chat
+2. Describe the recurring task — _"Write a Vitest spec for the file in context"_
+3. Copilot asks for tools, scope, output format
+4. `.prompt.md` is generated with frontmatter + numbered steps
+5. Refine and commit — your team gets it via `git pull`
+
+<br>
+
+**Bonus:** during a chat that worked well, ask _"extract this workflow as a prompt"_ — Copilot saves the conversation as a reusable prompt file.
+
+---
+layout: default
+---
+
 # Invocation in Copilot Chat
 
 ```text
@@ -202,6 +227,30 @@ description: |
 ```
 
 The model decides _when_ to call the agent based on this description. Make it explicit.
+
+---
+layout: default
+---
+
+# Let Copilot Scaffold It · `/create-agent`
+
+Same playbook as instructions and prompts — Copilot writes the `.agent.md` for you.
+
+```text
+/create-agent         → guided generation of a .agent.md file
+```
+
+Typical flow:
+
+1. Type `/create-agent` in Chat
+2. Describe the specialist — _"a security review agent for Angular components"_
+3. Copilot asks about tools, model, when to delegate
+4. `.agent.md` is generated with system prompt + `tools:` allowlist + sharp `description`
+5. Wire it into a prompt via `agent: <name>` — or let the model pick it up automatically
+
+<br>
+
+> 💡 `.chatmode.md` files were renamed to `.agent.md` — rename + relocate any old ones.
 
 ---
 layout: default
@@ -359,9 +408,10 @@ layout: default
    - "Write a Vitest spec for this file"
    - "Review this diff for accessibility"
    - "Generate a Playwright BDD scenario for the current component"
-3. Author `.github/prompts/<name>.prompt.md` with `description`, `tools:`, numbered steps
-4. Invoke it via `/<name>` in chat on a demo file
-5. Refine the steps based on what the model actually did
+3. **Scaffold** the file — type `/create-prompt` in Copilot Chat and describe the task
+4. Sharpen the generated `description`, `tools:`, and numbered steps
+5. Invoke it via `/<name>` in chat on a demo file
+6. Refine the steps based on what the model actually did
 
 ---
 layout: default
@@ -372,7 +422,7 @@ layout: default
 ## Build a specialist the model can delegate to
 
 1. Inspect `.github/agents/signal-store.agent.md` — system prompt, `tools:`, description
-2. Author `.github/agents/<name>.agent.md` for a focused role:
+2. **Scaffold** the file — type `/create-agent` in Copilot Chat and describe a focused role:
    - **angular-reviewer** — Angular 21 + Material 3 review
    - **vitest-author** — write spec files for changed code
    - **accessibility-auditor** — WCAG checks on components

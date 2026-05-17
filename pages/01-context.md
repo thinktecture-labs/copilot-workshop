@@ -144,6 +144,31 @@ One concern per file. Each loads only when needed.
 layout: default
 ---
 
+# Let Copilot Scaffold It · `/create-instruction`
+
+VS Code Copilot Chat ships slash commands that **write these files for you**:
+
+```text
+/init                 → repo-wide .github/copilot-instructions.md
+/create-instruction   → scoped .github/instructions/<name>.instructions.md
+/instructions         → menu: pick existing or create new
+```
+
+Typical flow:
+
+1. Type `/create-instruction` in Chat
+2. Describe the rule — e.g. _"Vitest spec files in `**/*.spec.ts` must use `describe` + `it`, no `test()`"_
+3. Copilot asks clarifying questions, picks the right `applyTo` glob
+4. File is generated, ready to commit
+
+<br>
+
+→ Same idea for prompts (`/create-prompt`) and agents (`/create-agent`) — covered in M3.
+
+---
+layout: default
+---
+
 # `AGENTS.md` — The Universal Convention
 
 - Plain markdown, one file at repo root
@@ -287,9 +312,10 @@ layout: default
 2. **Scaffold a baseline** with the harness you picked:
    - **Copilot CLI:** `copilot` → `/init`
    - **Claude Code:** `claude` → `/init`
-   - **VS Code:** ask Copilot Chat _"create a `.github/copilot-instructions.md` based on this repo"_
+   - **VS Code Copilot Chat:** `/init`
 3. Review the generated file — delete the fluff, sharpen 2–3 rules
-4. Add **one** scoped file under `.github/instructions/` with an `applyTo` glob
+4. **Add a scoped file** under `.github/instructions/` with an `applyTo` glob:
+   - **VS Code Copilot Chat:** `/create-instruction` → describe the rule, let Copilot pick the glob
 5. Ask the same question **before and after** — note the difference
 
 ---
