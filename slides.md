@@ -19,10 +19,6 @@ role: Principal Consultant AI
 
 The Basics — One-Day Workshop
 
-<div class="slides-link">
-  Follow along: <a href="https://copilot-workshop-ashy.vercel.app">copilot-workshop-ashy.vercel.app</a>
-</div>
-
 ---
 layout: default
 ---
@@ -84,6 +80,20 @@ layout: default
 | 15:00 – 15:25 | ☕ Break                                     |
 | 15:25 – 16:20 | **M4** — GitHub Copilot CLI (Hands-on 4 + 5) |
 | 16:20 – 17:00 | **M5** — Outlook, wrap-up, Q&A               |
+
+---
+layout: center
+---
+
+# Follow Along
+
+<div class="slides-follow">
+  <div class="slides-follow-qr" role="img" aria-label="QR code to slides"></div>
+  <div class="slides-follow-text">
+    <div class="slides-follow-label">Slides</div>
+    <a href="https://copilot-workshop-ashy.vercel.app">copilot-workshop-ashy.vercel.app</a>
+  </div>
+</div>
 
 ---
 layout: default

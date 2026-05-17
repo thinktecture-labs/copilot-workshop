@@ -143,15 +143,43 @@ html.dark .tool-card img {
   font-size: 0.9em;
 }
 
-.slides-link {
-  margin-top: 32px;
-  font-size: 1rem;
-  opacity: 0.85;
+.slides-follow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 48px;
 }
 
-.slides-link a {
-  color: var(--tt-red);
+.slides-follow-qr {
+  width: 240px;
+  height: 240px;
+  background-color: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  background-image: url('/images/qr-slides.svg');
+  background-size: 204px 204px;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.slides-follow-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slides-follow-label {
+  font-size: 1.1rem;
+  opacity: 0.75;
+}
+
+.slides-follow-text a {
+  font-size: 1.8rem;
   font-weight: 600;
+  color: var(--tt-red);
   text-decoration: none;
   border-bottom: 1px solid currentColor;
 }
