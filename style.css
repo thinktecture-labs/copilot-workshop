@@ -62,7 +62,34 @@ html.dark .slidev-layout :deep(.shiki) {
   background-color: var(--tt-code-bg) !important;
 }
 
+.slidev-layout pre {
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.slidev-layout pre::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.slidev-layout pre::-webkit-scrollbar-thumb {
+  background: var(--tt-light-gray);
+  border-radius: 4px;
+}
+
+.slidev-layout pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html.dark .slidev-layout pre::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
 html.dark .tt-icon-png[src*='/icons/black/'] {
+  filter: invert(1);
+}
+
+html.dark .tool-logo {
   filter: invert(1);
 }
 

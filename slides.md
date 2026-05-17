@@ -1,227 +1,148 @@
 ---
 theme: default
-title: Thinktecture Presentation Template
-subtitle: Slidev Template
+title: AI-Assisted Coding
+subtitle: The Basics — One-Day Workshop
 author: Thinktecture AG
 colorSchema: auto
 fonts:
   provider: none
 transition: slide-left
 layout: cover
-speaker: Vorname Name
-handle: vornamename
-role: Consultant
+speaker: Daniel Sogl
+handle: danielsogl
+role: Principal Consultant AI
 ---
 
-# Headline 1-zeilig
+# AI-Assisted Coding
 
 ::subtitle::
 
-Subheadline
-
----
-layout: cover
-speaker: Vorname Name
-handle: vornamename
-role: Senior Consultant
----
-
-# Headline
-
-# 2-zeilig
-
-::subtitle::
-
-Subheadline
-
----
-layout: cover-light
-speaker: Vorname Name
-handle: vornamename
-role: Consultant
----
-
-# Headline 1-zeilig
-
-::subtitle::
-
-Subheadline
+The Basics — One-Day Workshop
 
 ---
 layout: default
 ---
 
-# Slide Titel
+# About me
 
-## Subheadline
+## Daniel Sogl
 
-- Erster Punkt mit wichtigen Informationen
-- Zweiter Punkt mit Details
-- Dritter Punkt als Zusammenfassung
-  - Unterpunkt mit Erklärung
-  - Weiterer Unterpunkt
+<div style="display: flex; align-items: center; gap: 56px; margin-top: 16px;">
+  <div
+    role="img"
+    aria-label="Daniel Sogl"
+    style="width: 220px; height: 220px; border-radius: 50%; background-image: url('/images/profile.jpeg'); background-size: cover; background-position: center; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.12);"
+  ></div>
+  <div style="flex: 1;">
+    <ul style="margin: 0;">
+      <li>Consultant @ <strong>Thinktecture AG</strong></li>
+      <li>MVP – Developer & Web Technologies</li>
+      <li>Focus: Developer Productivity & Generative AI</li>
+      <li>Socials: <strong>linktr.ee/daniel_sogl</strong></li>
+    </ul>
+    <div style="display: flex; gap: 18px; align-items: center; margin-top: 24px;">
+      <TtIcon name="ai-agent" color="red" size="64px" />
+      <TtIcon name="code-01" color="black" size="64px" />
+      <TtIcon name="cloud" color="blue" size="64px" />
+    </div>
+  </div>
+  <div
+    role="img"
+    aria-label="Thinktecture"
+    style="height: 64px; width: 84px; background-image: url('/logos/logo_rot_vector.svg'); background-size: contain; background-position: center; background-repeat: no-repeat; flex-shrink: 0; align-self: flex-end;"
+  ></div>
+</div>
 
 ---
 layout: default
 ---
 
-# Code Beispiel
+# Agenda · Morning
 
-## TypeScript
+| Time          | Block                                                |
+| ------------- | ---------------------------------------------------- |
+| 09:00 – 09:25 | Welcome + Setup                                      |
+| 09:25 – 11:00 | **M1** — Context Management (3 mini hands-on inside) |
+| 11:00 – 11:25 | ☕ Break                                             |
+| 11:25 – 12:30 | **M2** — Prompting                                   |
+| 12:30 – 13:30 | 🍽 Lunch                                             |
 
-```ts
-import { Component, signal } from '@angular/core'
+---
+layout: default
+---
 
-@Component({
-  selector: 'app-root',
-  template: `<h1>{{ title() }}</h1>`,
-})
-export class AppComponent {
-  title = signal('Hello Thinktecture!')
-}
+# Agenda · Afternoon
+
+| Time          | Block                                        |
+| ------------- | -------------------------------------------- |
+| 13:30 – 14:00 | Hands-on 2 — Planning + Prompting            |
+| 14:00 – 15:00 | **M3** — Custom Workflows (3a + 3b)          |
+| 15:00 – 15:25 | ☕ Break                                     |
+| 15:25 – 16:20 | **M4** — GitHub Copilot CLI (Hands-on 4 + 5) |
+| 16:20 – 17:00 | **M5** — Outlook, wrap-up, Q&A               |
+
+---
+layout: default
+---
+
+# Hands-on Playground
+
+## copilot-workflow-demo
+
+- Angular 21 + NgRx Signal Store + Material 3
+- Pre-wired: `.github/instructions/`, `.github/prompts/`, `.github/agents/`, `.mcp.json`
+- Domain: Kanban-style task board
+- Bring your own repo if you prefer
+
+<br>
+
+Clone once, experiment all day.
+
+```bash
+git clone https://github.com/danielsogl/copilot-workflow-demo
+cd copilot-workflow-demo && npm install && npm start
 ```
 
 ---
-layout: two-cols
+src: ./pages/00-intro.md
 ---
 
-# Linke Spalte
-
-- Punkt eins
-- Punkt zwei
-- Punkt drei
-
-::right::
-
-# Rechte Spalte
-
-- Detail A
-- Detail B
-- Detail C
-
 ---
-layout: visual
+src: ./pages/01-context.md
 ---
 
-# Architektur
-
-## Systemübersicht
-
-Die Architektur basiert auf einem modularen Ansatz mit klarer Trennung der Zuständigkeiten.
-
-::visual::
-
-```mermaid
-graph TD
-  A[Client] --> B[API Gateway]
-  B --> C[Service A]
-  B --> D[Service B]
-  C --> E[Database]
-  D --> E
-```
-
 ---
-layout: default
+src: ./pages/02-prompting.md
 ---
 
-# TT Icons
-
-## Neue SVG-Icons (über CSS `mask-image` eingefärbt)
-
-<div style="display: flex; gap: 32px; flex-wrap: wrap; margin-top: 16px;">
-  <div style="text-align: center;">
-    <TtIcon name="ai-agent" color="red" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">ai-agent (red)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="llm-language-model" color="black" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">llm-language-model (black)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="vector-database" color="gray" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">vector-database (gray)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="rag-retrieval-augmented-generation" color="blue" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">rag (blue)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="tool-use-function-calling" color="red" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">tool-use (red)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="prompt-template" color="black" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">prompt-template (black)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="chain-of-thought" color="red" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">chain-of-thought (red)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="knowledge-base" color="blue" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">knowledge-base (blue)</div>
-  </div>
-</div>
-
-## Klassische PNG-Icons (4 Farbvarianten)
-
-<div style="display: flex; gap: 32px; flex-wrap: wrap; margin-top: 16px;">
-  <div style="text-align: center;">
-    <TtIcon name="cloud" color="red" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">cloud (red)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="server" color="black" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">server (black)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="datenbank" color="gray" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">datenbank (gray)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="key" color="blue" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">key (blue)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="gears" color="red" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">gears (red)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="notebook" color="black" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">notebook (black)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="user" color="red" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">user (red)</div>
-  </div>
-  <div style="text-align: center;">
-    <TtIcon name="globus" color="blue" size="64px" />
-    <div style="font-size: 0.75rem; margin-top: 4px;">globus (blue)</div>
-  </div>
-</div>
-
 ---
-layout: section
+src: ./pages/03-workflows.md
 ---
 
-# Nächster Abschnitt
-
-Überleitung zum nächsten Thema
-
 ---
-layout: blank
+src: ./pages/04-copilot-cli.md
 ---
 
-<div style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 3rem; font-weight: 600; color: var(--tt-red);">
-  Freier Inhalt
-</div>
+---
+src: ./pages/05-outlook.md
+---
 
 ---
 layout: end
 website: thinktecture.com
-email: info@thinktecture.com
+email: daniel.sogl@thinktecture.com
 ---
 
-# Vielen Dank!
+# Thank you!
 
-Fragen?
+<div style="font-size: 1.8rem; font-weight: 500; color: white; margin-top: 12px;">Questions?</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 16px; margin-top: 40px;">
+  <div style="background-color: white; padding: 14px; border-radius: 14px; box-shadow: 0 4px 14px rgba(0,0,0,0.18);">
+    <div role="img" aria-label="linktr.ee/daniel_sogl" style="width: 200px; height: 200px; background-image: url('/images/qr-linktree.svg'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+  </div>
+  <div style="text-align: center;">
+    <div style="font-size: 0.95rem; font-weight: 400; opacity: 0.85;">Slides & socials</div>
+    <div style="font-size: 1.4rem; font-weight: 600;">linktr.ee/daniel_sogl</div>
+  </div>
+</div>
