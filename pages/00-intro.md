@@ -32,30 +32,22 @@ layout: default
 
 ## Different **harnesses** — same LLMs underneath
 
-<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px;">
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <div style="height: 80px; width: 80px; display: flex; align-items: center; justify-content: center;">
-      <img src="/images/tools/githubcopilot.svg" alt="GitHub Copilot" class="tool-logo" style="max-height: 80px; max-width: 80px; object-fit: contain;" />
-    </div>
-    <div style="font-size: 0.9rem; margin-top: 12px; text-align: center;">GitHub Copilot</div>
+<div class="tool-grid">
+  <div class="tool-card">
+    <img src="/images/tools/githubcopilot.svg" alt="GitHub Copilot" />
+    <div class="tool-label">GitHub Copilot</div>
   </div>
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <div style="height: 80px; width: 80px; display: flex; align-items: center; justify-content: center;">
-      <img src="/images/tools/anthropic.svg" alt="Claude Code" class="tool-logo" style="max-height: 80px; max-width: 80px; object-fit: contain;" />
-    </div>
-    <div style="font-size: 0.9rem; margin-top: 12px; text-align: center;">Claude Code</div>
+  <div class="tool-card">
+    <img src="/images/tools/anthropic.svg" alt="Claude Code" />
+    <div class="tool-label">Claude Code</div>
   </div>
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <div style="height: 80px; width: 80px; display: flex; align-items: center; justify-content: center;">
-      <img src="/images/tools/cursor.svg" alt="Cursor" class="tool-logo" style="max-height: 80px; max-width: 80px; object-fit: contain;" />
-    </div>
-    <div style="font-size: 0.9rem; margin-top: 12px; text-align: center;">Cursor</div>
+  <div class="tool-card">
+    <img src="/images/tools/cursor.svg" alt="Cursor" />
+    <div class="tool-label">Cursor</div>
   </div>
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <div style="height: 80px; width: 80px; display: flex; align-items: center; justify-content: center;">
-      <img src="/images/tools/gnubash.svg" alt="CLIs" class="tool-logo" style="max-height: 80px; max-width: 80px; object-fit: contain;" />
-    </div>
-    <div style="font-size: 0.9rem; margin-top: 12px; text-align: center;">CLIs (gh copilot, claude)</div>
+  <div class="tool-card">
+    <img src="/images/tools/gnubash.svg" alt="CLIs" />
+    <div class="tool-label">CLIs (gh copilot, claude)</div>
   </div>
 </div>
 

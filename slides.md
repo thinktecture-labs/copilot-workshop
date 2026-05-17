@@ -19,6 +19,10 @@ role: Principal Consultant AI
 
 The Basics — One-Day Workshop
 
+<div class="slides-link">
+  Follow along: <a href="https://copilot-workshop-ashy.vercel.app">copilot-workshop-ashy.vercel.app</a>
+</div>
+
 ---
 layout: default
 ---
